@@ -66,9 +66,9 @@ def run():
             random_stop = rsp.json()
             if random_stop:
                 TIME = random.randint(TMIN, TMAX)
-                random_stopper = threading.Timer(TIME, play_obj.pause)
                 logging.info('the music of play object no %s will be paused in %s s', play_obj.play_id, TIME)
-                random_stopper.start()
+                time.sleep(TIME)
+                play.obj.pause()
             previous_rfid = rfid
         else:
             logging.info('did not get a music, do nothing')
