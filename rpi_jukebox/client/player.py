@@ -68,7 +68,7 @@ def run():
                 TIME = random.randint(TMIN, TMAX)
                 logging.info('the music of play object no %s will be paused in %s s', play_obj.play_id, TIME)
                 time.sleep(TIME)
-                play.obj.pause()
+                play_obj.pause()
             previous_rfid = rfid
         else:
             logging.info('did not get a music, do nothing')
